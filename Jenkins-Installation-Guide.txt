@@ -1,0 +1,17 @@
+RHEL-8 N-Virginia
+AMI: ami-0c322300a1dd5dc79
+KP: My-NV-KP.ppk
+SG: Jenins-SG
+Instance type: t2.micro
+
+Commands:
+#!/bin/bash
+sudo su
+yum update -y
+yum install java-1.8* -y
+---------vi .bash_profile
+		Set JAVA_HOME
+		Change PATH=$PATH:$HOME/bin to PATH=$PATH:$JAVA_HOME:$HOME/bin
+
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.232.b09-2.el8_1.x86_64
+		
